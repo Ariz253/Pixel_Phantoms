@@ -1,0 +1,126 @@
+/* ================= CONTACT PAGE STYLES ================= */
+
+.contact-section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-desc {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Enhanced Contact Box */
+.contact-box {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    text-align: left; /* Reset text alignment for form elements */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't overflow width */
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(0, 170, 255, 0.1);
+}
+
+.contact-box textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #0088cc;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Success/Error Feedback Message */
+.feedback-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feedback-message.success {
+    display: block;
+    opacity: 1;
+    background-color: rgba(0, 200, 83, 0.1);
+    color: #00c853;
+    border: 1px solid #00c853;
+}
+
+.feedback-message.error {
+    display: block;
+    opacity: 1;
+    background-color: rgba(255, 23, 68, 0.1);
+    color: #ff1744;
+    border: 1px solid #ff1744;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .contact-box {
+        padding: 25px;
+    }
+}
