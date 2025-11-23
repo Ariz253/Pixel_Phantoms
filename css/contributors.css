@@ -28,7 +28,7 @@
 .stat-card h3 { font-size: 1rem; color: var(--text-secondary); margin-bottom: 5px; }
 .stat-card p { font-size: 2rem; font-weight: bold; margin: 0; color: var(--accent-color); }
 
-/* 2. Project Lead Card (Resized to match Contributors) */
+/* 2. Project Lead Card */
 .lead-container {
     display: flex;
     justify-content: center;
@@ -39,12 +39,12 @@
 
 .project-lead-card {
     background: linear-gradient(135deg, rgba(255, 165, 0, 0.1), rgba(255, 140, 0, 0.05));
-    border: 2px solid #FFA500; /* Keeps the distinct gold border */
-    padding: 25px 20px; /* Reduced padding to match contributor card */
-    border-radius: 15px; /* Reduced radius to match contributor card */
+    border: 2px solid #FFA500;
+    padding: 25px 20px;
+    border-radius: 15px;
     text-align: center;
     position: relative;
-    max-width: 260px; /* Reduced width to be equivalent to contributor card */
+    max-width: 260px;
     width: 100%;
     box-shadow: 0 8px 20px rgba(255, 165, 0, 0.15);
     transition: transform 0.3s ease;
@@ -59,7 +59,7 @@
 .lead-badge {
     background: #FFA500;
     color: #fff;
-    padding: 4px 12px; /* Smaller badge */
+    padding: 4px 12px;
     border-radius: 20px;
     font-weight: bold;
     font-size: 0.8rem;
@@ -69,7 +69,7 @@
 }
 
 .project-lead-card img {
-    width: 80px; /* Reduced from 120px to 80px (matches contributors) */
+    width: 80px;
     height: 80px;
     border-radius: 50%;
     border: 3px solid #FFA500;
@@ -78,7 +78,7 @@
 }
 
 .project-lead-card h3 {
-    font-size: 1.1rem; /* Matched font size */
+    font-size: 1.1rem;
     margin: 0 0 5px 0;
     color: var(--text-primary);
 }
@@ -92,42 +92,39 @@
 /* 3. Contributors Grid */
 .contributors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Slightly narrower columns */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
     min-height: 200px;
 }
 
 .contributor-card {
     background: var(--card-bg);
-    padding: 15px; /* Reduced padding */
+    padding: 15px;
     border-radius: 12px;
     text-align: center;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
-    
-    /* Layout Fixes for Height */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centers content vertically */
-    gap: 8px; /* Keeps elements close together */
-    
-    height: 100%; /* Ensures equal height in row, but row will be shorter now */
+    justify-content: center;
+    gap: 8px;
+    height: 80%;
+    position: relative;
 }
 
 .contributor-card:hover {
-    border-color: var(--accent-color);
     transform: translateY(-5px);
     box-shadow: var(--shadow);
 }
 
 .contributor-card img {
-    width: 60px; /* Smaller image */
+    width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 2px solid var(--border-color);
     object-fit: cover;
-    margin: 0; /* Margin handled by flex gap */
+    margin: 0;
 }
 
 .contributor-card .cont-name {
@@ -135,13 +132,43 @@
     color: var(--text-primary);
     display: block;
     text-decoration: none;
-    font-size: 1rem; /* Slightly smaller font */
+    font-size: 1rem;
     line-height: 1.3;
 }
 
-/* Badge Adjustments */
+/* === TIER CARDS STYLING === */
+
+/* Gold Tier */
+.tier-gold {
+    border: 2px solid #FFD700;
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.08), var(--card-bg));
+}
+.tier-gold:hover { box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+
+/* Silver Tier */
+.tier-silver {
+    border: 2px solid #C0C0C0;
+    background: linear-gradient(145deg, rgba(192, 192, 192, 0.08), var(--card-bg));
+}
+.tier-silver:hover { box-shadow: 0 0 15px rgba(192, 192, 192, 0.3); }
+
+/* Bronze Tier */
+.tier-bronze {
+    border: 2px solid #CD7F32;
+    background: linear-gradient(145deg, rgba(205, 127, 50, 0.08), var(--card-bg));
+}
+.tier-bronze:hover { box-shadow: 0 0 15px rgba(205, 127, 50, 0.3); }
+
+/* Contributor Tier */
+.tier-contributor {
+    border: 1px solid rgba(0, 255, 127, 0.3);
+}
+.tier-contributor:hover { border-color: #00ff7f; }
+
+
+/* === BADGE STYLING === */
 .cont-commits-badge {
-    font-size: 0.75rem; /* Smaller text */
+    font-size: 0.75rem;
     padding: 4px 10px;
     border-radius: 15px;
     font-weight: 600;
@@ -150,6 +177,67 @@
     gap: 4px;
     border: 1px solid transparent;
     margin-top: 2px;
+}
+
+/* Badge Colors */
+.badge-gold {
+    background: rgba(255, 215, 0, 0.15);
+    color: #FFD700;
+    border-color: #FFD700;
+}
+
+.badge-silver {
+    background: rgba(192, 192, 192, 0.15);
+    color: #C0C0C0;
+    border-color: #C0C0C0;
+}
+
+.badge-bronze {
+    background: rgba(205, 127, 50, 0.15);
+    color: #CD7F32;
+    border-color: #CD7F32;
+}
+
+.badge-contributor {
+    background: rgba(0, 255, 127, 0.15);
+    color: #00ff7f;
+    border-color: #00ff7f;
+}
+
+/* --- PAGINATION CONTROLS --- */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.pagination-btn {
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-info {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 /* 4. Activity Timeline */
@@ -162,7 +250,6 @@
     overflow-y: auto;
 }
 
-/* Scrollbar styling */
 .activity-container::-webkit-scrollbar { width: 8px; }
 .activity-container::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
 
