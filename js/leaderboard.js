@@ -11,9 +11,9 @@ const EVENT_DATA_URL = '../data/attendance.csv'; // Path to your CSV
 // --- SCORING MATRIX (Inspired by Contributors.js) ---
 const SCORING = {
     PR: {
-        L3: 500,    // High Complexity
-        L2: 300,    // Medium Complexity
-        L1: 100,    // Low Complexity
+        L3: 1100,    // High Complexity
+        L2: 500,    // Medium Complexity
+        L1: 200,    // Low Complexity
         DEFAULT: 50
     },
     EVENT: {
