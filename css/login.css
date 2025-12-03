@@ -1,0 +1,287 @@
+/* ================= LOGIN PAGE SPECIFIC STYLES ================= */
+
+/* --- HERO OVERRIDES --- */
+.login-hero {
+    min-height: 50vh;
+    padding-top: 100px;
+    background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border-bottom: 2px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-hero .terminal-box {
+    margin: 0;
+    text-align: center;
+    border-left: none;
+    padding: 30px 40px;
+}
+
+.login-hero .console-text {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+    animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+    0%, 100% {
+        text-shadow: 2px 2px var(--accent-color), -2px -2px #ff0055;
+        transform: translate(0, 0);
+    }
+    25% {
+        text-shadow: -2px -2px var(--accent-color), 2px 2px #00ff88;
+        transform: translate(2px, 2px);
+    }
+    50% {
+        text-shadow: -3px 3px #ff0055, 3px -3px var(--accent-color);
+        transform: translate(-3px, -3px);
+    }
+    75% {
+        text-shadow: 2px -2px #00ff88, -2px 2px #ff0055;
+        transform: translate(3px, -3px);
+    }
+}
+
+/* --- LOGIN FORM SECTION --- */
+.login-section {
+    padding: 60px 20px 100px;
+    background: var(--bg-primary);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: -150px auto 0; /* Pulls card up into hero space */
+    position: relative;
+    z-index: 10;
+}
+
+.login-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Status Bar */
+.system-status-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    margin: -40px -40px 30px;
+    background: rgba(0, 170, 255, 0.1);
+    border-bottom: 1px solid var(--accent-color);
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.status-indicator {
+    width: 10px; height: 10px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+    animation: pulse-green 2s infinite;
+}
+
+.status-value {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.login-title {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+    text-shadow: 1px 1px 0px var(--accent-color);
+}
+
+.login-desc {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--input-bg);
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-login:hover {
+    background: #0088cc;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 170, 255, 0.4);
+}
+
+/* Options Row */
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Custom Checkbox */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.forgot-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Form Feedback */
+.feedback-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.feedback-message.show {
+    opacity: 1;
+}
+
+.feedback-message.success {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    border: 1px solid #00ff88;
+}
+
+.feedback-message.error {
+    background: rgba(255, 0, 85, 0.1);
+    color: #ff0055;
+    border: 1px solid #ff0055;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .login-card {
+        padding: 30px;
+    }
+    .system-status-bar {
+        margin: -30px -30px 20px;
+    }
+    .options-row {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
