@@ -11,10 +11,27 @@ function renderFooter(basePath = '') {
                     A community of passionate developers, designers, and creators building amazing digital experiences.
                 </p>
                 <div class="social-links">
-                    <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link" aria-label="Discord"><i class="fab fa-discord"></i></a>
-                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/sayeeg-11/Pixel_Phantoms" 
+                    target="_blank" 
+                    class="social-link" 
+                    aria-label="GitHub">
+                    <i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/company/pixel-phantoms/"
+                    target="_blank"
+                    class="social-link"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/phantoms_pixel" 
+                    target="_blank" 
+                    class="social-link" 
+                    aria-label="Twitter">\
+                    <i class="fab fa-twitter"></i></a>
+                    <a href="https://discord.com/channels/1049667734025289729/1440205974806986844"
+                    target="_blank"
+                    class="social-link" 
+                    aria-label="Discord">
+                    <i class="fab fa-discord"></i></a>
+                    
                 </div>
             </div>
 
