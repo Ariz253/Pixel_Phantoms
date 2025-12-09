@@ -1,6 +1,6 @@
 function renderFooter(basePath = '') {
     const footerHTML = `
-    <div class="footer-container">
+    <div class="footer-container site-footer">
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="footer-logo">
