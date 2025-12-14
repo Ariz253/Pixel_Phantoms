@@ -3,6 +3,7 @@
     "title": "CodeStorm 2025",
     "description": "A 24-hour hackathon where innovators build real-world tech solutions.",
     "date": "April 10–11, 2025",
+    "countdownDate": "2025-12-31T00:00:00",
     "location": "Innovation Lab",
     "status": "REGISTRATION OPEN"
   },
@@ -10,6 +11,7 @@
     "title": "AI & ML Bootcamp",
     "description": "Hands-on bootcamp covering AI and Machine Learning basics.",
     "date": "May 5, 2025",
+    "countdownDate": "2025-12-30T00:00:00",
     "location": "Seminar Hall",
     "status": "UPCOMING"
   }
