@@ -6,25 +6,53 @@ function renderFooter(basePath = '') {
                 <h3 class="footer-title">Pixel Phantoms</h3>
                 <p class="footer-description">Empowering the next generation of tech innovators through collaboration, learning, and creativity.</p>
                 <div class="social-links">
-    <button class="social-link github" data-url="https://github.com/sayeeg-11/Pixel_Phantoms" aria-label="GitHub">
-    <i class="fab fa-github" aria-hidden="true"></i>
-</button>
+    <a
+  href="https://github.com/sayeeg-11/Pixel_Phantoms"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-link github"
+  aria-label="GitHub"
+>
+  <i class="fab fa-github"></i>
+</a>
 
-    <button class="social-link instagram" data-url="https://www.instagram.com/pixelphantoms_?igsh=aWxhbGhsM3piaHFj" aria-label="Instagram">
-    <i class="fab fa-instagram" aria-hidden="true"></i>
-</button>
+    <a
+  href="https://www.instagram.com/pixelphantoms_?igsh=aWxhbGhsM3piaHFj"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-link instagram"
+  aria-label="Instagram"
+>
+  <i class="fab fa-instagram" aria-hidden="true"></i>
+</a>
 
-    <button class="social-link discord" data-url="https://discord.com/channels/1049667734025289729/1440205974806986844" aria-label="Discord">
-    <i class="fab fa-discord" aria-hidden="true"></i>
-</button>
+<a
+  href="https://discord.com/channels/1049667734025289729/1440205974806986844"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-link discord"
+  aria-label="Discord"
+>
+  <i class="fab fa-discord" aria-hidden="true"></i>
+</a>
 
-    <button class="social-link linkedin" data-url="https://www.linkedin.com/company/pixel-phantoms/" aria-label="LinkedIn">
-    <i class="fab fa-linkedin" aria-hidden="true"></i>
-</button>
+<a
+  href="https://www.linkedin.com/company/pixel-phantoms/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-link linkedin"
+  aria-label="LinkedIn"
+>
+  <i class="fab fa-linkedin" aria-hidden="true"></i>
+</a>
 
-    <button class="social-link email" data-url="mailto:contact@pixelphantoms.com" aria-label="Email">
-    <i class="far fa-envelope" aria-hidden="true"></i>
-</button>
+<a
+  href="mailto:contact@pixelphantoms.com"
+  class="social-link email"
+  aria-label="Email"
+>
+  <i class="far fa-envelope" aria-hidden="true"></i>
+</a>
 
 </div>
 
@@ -55,17 +83,6 @@ function renderFooter(basePath = '') {
         </div>
     </footer>
     `;
-
-    document.getElementById('footer-placeholder').innerHTML = footerHTML;
-
-    document.querySelectorAll('.social-links button').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const url = btn.getAttribute('data-url');
-        window.open(url, '_blank');
-    });
-});
-
-
 
 }
 
